@@ -1,0 +1,1527 @@
+/* landing page styling start */
+
+.landing-page-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+}
+.landing-page-header .gradient-blur-image {
+    width: 550px;
+    height: auto;
+    filter: blur(100px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -350px;
+}
+.landing-page-header .logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 100px;
+    z-index: 2;
+    position: relative;
+}
+.landing-page-header .orange-blur-ball {
+    position: absolute;
+    top: 100px;
+    left: 20%;
+    width: 30px;
+    height: 30px;
+    animation: bounce 3s linear 0s infinite;
+}
+.landing-page-header .violet-ball-lower-right {
+    position: absolute;
+    top: 120px;
+    right: 20%;
+    height: 30px;
+    width: 30px;
+    animation: bounce 3s linear 0s infinite;
+}
+.landing-page-header .violet-ball {
+    position: absolute;
+    top: 161px;
+    left: 5%;
+    height: 40px;
+    width: 40px;
+    animation: bounce 3s linear 0s infinite;
+}
+.landing-page-header .violet-ball-right {
+    position: absolute;
+    top: 350px;
+    right: 25%;
+    height: 25px;
+    width: 25px;
+    animation: bounce 3s linear 0s infinite;
+}
+
+.landing-page-header .orange-ball-right {
+    position: absolute;
+    top: 230px;
+    right: 5%;
+    height: 40px;
+    width: 40px;
+    animation: bounce 3s linear 0s infinite;
+}
+.landing-page-header .star-twinkle {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 220px;
+    left: 30%;
+    animation: spin 10s linear 0s infinite;
+}
+.landing-page-header .star-twinkle-right {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 145px;
+    right: 35%;
+    animation: spin 10s linear 0s infinite;
+}
+.landing-page-header .orange-ball-left-lower {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 350px;
+    left: 15%;
+    animation: bounce 3s linear 0s infinite;
+}
+.landing-page-header .sign-up-sign-in-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.landing-page-main .divider {
+    display: block;
+    margin: 7rem auto 0;
+}
+
+/* Nft card styling */
+.nft-gallery-conatainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flip-card.nft-card {
+    width: 500px;
+    height: 500px;
+    perspective: 1000px;
+    position: relative;
+    color: #fff;
+    padding: 0.5rem;
+    background-color: #4b4257;
+    border-radius: var(--font-10);
+    cursor: pointer;
+}
+.general_card.flip-card {
+    perspective: 1000px;
+    cursor: pointer;
+}
+.nft-card .card-overlay,
+.flip_card_general_inner .card-overlay {
+    background-color: #00000080;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--font-10);
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+.flip-card.nft-card:hover .card-overlay,
+.flip_card_general_inner:hover .card-overlay {
+    opacity: 1;
+}
+.flip-card.nft-card:is(:hover, :focus) .nft-head-details {
+    opacity: 1;
+    transform: translateX(-50%);
+}
+.flip-card.nft-card:is(:hover, :focus) .nft-author {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+.flip-card.nft-card .flip-card-inner,
+.flip_card_general_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip_card_general_inner .latest_work_card .flip-card-back,
+.flip_card_general_inner .latest_work_card .flip-card-front {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.nft-card .nft-head-details {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
+    top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 3rem;
+    z-index: 1;
+    transition: 0.3s;
+    opacity: 0;
+
+    color: #fff;
+}
+.nft-card .nft-author {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    opacity: 0;
+    transition: 0.3s;
+    color: #fff;
+    z-index: 1;
+}
+
+.nft-card .flip-card-front,
+.nft-card .flip-card-back,
+.flip_card_general_inner .latest_work_card .flip-card-front,
+.flip_card_general_inner .latest_work_card .flip-card-back {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.nft-card .flip-card-inner .nft-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--font-10);
+    position: relative;
+}
+.flip_card_general_inner .latest_work_card {
+    padding: 0;
+}
+.flip_card_general_inner .latest_work_card .flip-card-front,
+.flip_card_general_inner .latest_work_card .flip-card-back {
+    padding: 1.5rem 1rem;
+}
+
+.nft-card .flip-card-back,
+.flip_card_general_inner .latest_work_card .flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    border-radius: var(--font-10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card.flipped .flip_card_general_inner .latest_work_card .flip-card-back {
+    transform: rotateY(0deg);
+}
+.flip-card.flipped .flip_card_general_inner .latest_work_card .flip-card-front,
+.nft-card.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* landing page ends */
+
+/* sign up and  sign in styles  */
+.glassmorphic-container {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: #fff;
+    margin: 4rem;
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+}
+.glassmorphic-container .blur-orange-ball {
+    z-index: -1;
+    filter: blur(50px);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+.glassmorphic-container .violet-ball {
+    z-index: -1;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    filter: blur(43px);
+}
+.glassmorphic-container .inner-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.inner-container .display-image-container {
+    flex: 1;
+}
+.inner-container .user-input-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.inner-container .sign-in-with-google {
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #000;
+}
+.inner-container .sign-in-with-google:hover {
+    border-color: #000;
+}
+._or-divider {
+    position: relative;
+    border-top: 2px solid #fff;
+}
+._or-divider ._or {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -13px);
+    background: #7b7683;
+    padding: 0 15px;
+}
+.sign-up-form .user-inputfield-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sign-up-form .user-inputfield-container .user-input-field {
+    background-color: #fff;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: var(--font-10);
+    caret-color: #000;
+    color: #000;
+    transition: 0.3s;
+}
+.sign-up-form .user-inputfield-container .user-input-field:hover {
+    border-color: #000;
+}
+.sign-up-form .user-inputfield-container .user-input-field::placeholder {
+    color: rgb(158, 153, 153);
+}
+.sign-up-form .sign-in-sign-up-link {
+    font-size: 18px;
+    color: #d4dbe1;
+    transition: 0.3s;
+    text-decoration: underline !important;
+}
+.sign-up-form .sign-in-sign-up-link:hover {
+    text-decoration: underline;
+}
+
+/* sign in and sign up ends */
+
+/* App Main Header starts */
+.app-main-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.app-main-header .app-header-logo {
+    margin-right: 20%;
+    width: 70px;
+    height: 70px;
+}
+.app-main-header .header-link-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+.app-main-header .connect-wallet-btn {
+    padding: 0.3rem 1rem;
+    font-size: 13px;
+}
+.header-link-container .header-link {
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.header-link-container .header-link:hover {
+    color: #7b7683;
+}
+.header-link-container .header-link.header-icon {
+    color: unset;
+    font-weight: unset;
+}
+.header-link-container .header-link.header-icon:hover {
+    color: #2980b9;
+}
+.header-link-container .header-link.header-icon .icon {
+    width: 20px;
+    height: 20px;
+}
+.app-main-hero-container {
+    background-color: #180d2c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    position: relative;
+    /* max-height: 450px; */
+}
+
+.app-main-hero-container .background-effect-left {
+    width: 70px;
+    height: 100vh;
+    filter: blur(100px);
+    position: fixed;
+    left: 0;
+    top: 10%;
+}
+.app-main-hero-container .background-effect-right {
+    width: 40px;
+    height: 100vh;
+    filter: blur(113px);
+    position: fixed;
+    right: 0;
+    top: 20%;
+}
+.app-main-hero-container .hero-banner-text-contanier {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    gap: 8rem;
+}
+.hero-banner-text-contanier .eth-img {
+    position: absolute;
+    top: -60px;
+    width: 30px;
+    height: 30px;
+    transform: translate(0, -20%) scale(0.7);
+    left: 20%;
+    opacity: 0;
+    transition: 0.7s ease;
+}
+.app-main-hero-container.active .hero-banner-text-contanier .eth-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.hero-banner-text-contanier .orange_ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transform: translate(0, 5%);
+    transition: transform 0.5s;
+}
+.app-main-hero-container.active .hero-banner-text-contanier .orange_ball {
+    transform: translate(0, -30%);
+}
+.hero-banner-text-contanier .open-in-opeansea_link {
+    position: relative;
+}
+.hero-banner-text-contanier .open-in-opeansea_link .view_icon {
+    fill: #e348ff;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-banner-text-contanier .view_opensea_span {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    box-shadow: 0 6px 32px -1px rgba(0, 0, 0, 0.08);
+    background-color: #241f2b;
+    z-index: 3;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.hero-banner-text-contanier .tg-circle-text-path {
+    fill: #e348ff;
+    height: auto;
+    max-width: 132px;
+    right: 10%;
+    transform-origin: center;
+    text-transform: uppercase;
+    display: inline-flex;
+    animation: spin 10s linear 0s infinite;
+}
+.hero-banner-text-contanier .btc-img {
+    width: 30px;
+    height: 30px;
+    left: 45%;
+    position: absolute;
+    top: 65%;
+    transform: translate(0, -45%) scale(0.3);
+    transition: 0.7s;
+}
+
+.app-main-hero-container.active .hero-banner-text-contanier .btc-img {
+    transform: translate(65%, -45%) scale(1);
+}
+.nft-img-container {
+    position: relative;
+    transform: scale(0.7);
+    transition: 0.7s ease;
+}
+.app-main-hero-container.active .nft-img-container {
+    transform: scale(1);
+}
+.nft-img-container .left-img {
+    position: absolute;
+    top: 50px;
+    width: 200px;
+    height: auto;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+.nft-img-container .cancel-x {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    right: 100px;
+    transform: scale(0);
+    transition: 0.9s;
+}
+.app-main-hero-container.active .nft-img-container .cancel-x {
+    transform: scale(1);
+}
+.nft-img-container .right-img {
+    position: absolute;
+    top: 85px;
+    right: -15px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2;
+    /* background-color: #f696ff5b; */
+}
+.nft-img-container .white-dashed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 230px;
+    height: auto;
+    opacity: 0.3;
+}
+.gradient-filled-btn.view-in-opensea-btn {
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.latest_work_container .gradient-filled-btn {
+    padding: 1rem 4rem;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.hero-banner-text-contanier .hero-text_header {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* styling app header */
+/* .app-main-header .app-header-logo.small-screen {
+    margin-right: 30%;
+    width: 50px;
+    height: 50px;
+} */
+.header-link-container .header-link.header-icon .icon.wallet {
+    width: 17px;
+    height: 17px;
+}
+.header-link-container .menu-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.app-page-inner {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-page-inner .main-header {
+    font-size: 50px;
+    font-weight: bold;
+}
+.side-bar {
+    background-color: #180d2c;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    min-width: 250px;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(10deg, #2600fc, #ff00ea) 2;
+    border-image-width: 3px 0 0 0;
+    border-style: solid;
+}
+.sidebar-open .side-bar {
+    transform: translateX(0);
+}
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 2;
+}
+.side-bar .close-sidebar-btn {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 0.7s;
+}
+.sidebar-open .side-bar .close-sidebar-btn {
+    transform: rotate(0deg);
+}
+.side-bar .sidebar-link-container {
+    list-style: none;
+    margin-top: 1rem;
+    width: 100%;
+    border-top: 1px solid #ffffff2a;
+}
+.sidebar-container {
+    overflow-x: hidden;
+}
+.side-bar .sidebar-link-container .sidebar-links {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ffffff2a;
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0.7rem 2rem;
+}
+.side-bar .side-bar-social-links .icon {
+    fill: #fff;
+    width: 14px;
+    height: 14px;
+}
+.side-bar .side-bar-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #ffffff2a;
+    padding: 0.4rem 0.5rem;
+    transition: 0.5s;
+    border-radius: 2px;
+}
+.side-bar .side-bar-social-links:hover {
+    background-color: #5e16e4;
+    border-color: transparent;
+}
+.scrolled.app-main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000a2;
+    width: 100%;
+    z-index: 4;
+    padding: 0.3rem 0;
+    transition: 0.5s ease;
+}
+.hero-banner-text-contanier .hero_inner_text_div {
+    display: flex;
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+/* app header ends */
+
+/* App Main header ends */
+
+/* styling powered by starts */
+
+.powered_by_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.powered_by_container.active .powered_by_header {
+    transform: scale(1);
+    opacity: 1;
+}
+.powered_by_container .powered_by_header {
+    text-transform: uppercase;
+    color: #ada8b4;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 0.9s;
+}
+.powered_by_container .powered-by-img {
+    width: 120px;
+    height: auto;
+}
+.powered_by_container .powered-by-img.bit-go {
+    width: 100px;
+}
+.powered_by_container .sponsor_container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.powered_by_container.active .sponsor_container {
+    opacity: 1;
+}
+.app-main-hero-container .powered_by_divider {
+    width: 70px;
+    height: auto;
+    margin: 2rem auto;
+    transform: translateY(-20px);
+    transition: 0.5s ease;
+}
+.app-main-hero-container.active .powered_by_divider {
+    transform: translateY(0);
+}
+/* styling powered by ends */
+
+/* styling about us section */
+.about-us-container,
+.latest_work_container {
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+}
+.latest_work_container .latest_work_card {
+    background-color: #ffffff0d;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+    cursor: pointer;
+}
+.latest_work_container .col-lg-3:nth-child(even) {
+    transform: translateY(-20px);
+}
+
+.latest_work_container .latest_work_card .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.latest_work_container .row {
+    max-width: 65%;
+}
+
+.about-us-container .platform_stat {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.about-us-container .platform_stat .fact_contaoiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-us-container .about_platform_details .icon {
+    max-width: 450px;
+    height: auto;
+}
+.about_platform_details .sub-header {
+    font-size: var(--font-50);
+    margin: 0;
+}
+.about_platform_details .main-header {
+    font-size: 55px;
+}
+.about_platform_details .singular_container {
+    padding: 5rem 2rem;
+}
+.about-us-container .content_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about-us-container .content_container .sub_text {
+    font-size: 15px;
+}
+.about-us-container .details.content_container,
+.about-us-container .select.content_container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.about-us-container .select.content_container .icon_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem;
+    border-radius: 15px;
+    background-image: linear-gradient(1deg, #2600fc, #ff00ea);
+}
+.about-us-container .select.content_container .sub_content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.about-us-container .about_eth_top {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 70px;
+    left: 60%;
+}
+.about-us-container .about_btc_down {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 250px;
+    left: 40%;
+}
+/* about us ends */
+
+/* how to mint styling */
+.how_to_min_div .how-to-min-card {
+    overflow: hidden;
+    position: relative;
+    padding-top: 2rem;
+}
+.how-to-min-card .tiny-ball-top {
+    position: absolute;
+    left: 450px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+}
+.how-to-min-card .purple-ball-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 250px;
+    width: 20px;
+    height: 20px;
+}
+.how-to-min-card .cancel-x-right {
+    position: absolute;
+    bottom: 30px;
+    right: 230px;
+    width: 20px;
+    height: 20px;
+}
+.how_to_min_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.how_to_min_div .how-to-min-card .mint_card {
+    background-color: #180d2c;
+    padding: 1rem;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.how_to_min_div .how-to-min-card .mint_card .content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.how_to_min_div .how-to-min-card .mint_card .content .icon {
+    width: 65px;
+    height: auto;
+}
+.how_to_min_div .mint_card .content h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+/* how to mint ends */
+
+/* Twopence Road map */
+.twopence_roadmap_container {
+    padding: 2rem;
+}
+
+.twopence_roadmap_container .roadmap_card {
+    background-color: #1b1229;
+    padding: 1rem;
+    width: 270px;
+    height: 100%;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.twopence_roadmap_container .roadmap_card .percentage_indicator {
+    transform: rotate(25deg);
+    width: 45px;
+    height: 45px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    word-wrap: break-word;
+    border-radius: 50%;
+    line-height: 1;
+    word-break: break-word;
+    background-image: linear-gradient(
+        var(--gradient-angle),
+        var(--gradient-first),
+        var(--gradient-second)
+    );
+}
+
+.twopence_roadmap_container
+    .roadmap_card
+    .percentage_indicator
+    .percentage_value {
+    font-size: 15px;
+    font-weight: bold;
+}
+.roadmap_card .divider_line {
+    width: 100px;
+}
+.roadmap_card .list_container .list {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.roadmap_card .list_container .icon {
+    background-image: linear-gradient(1deg, #2600fc, #ff00ea);
+}
+.roadmap_card .list_container {
+    list-style: none;
+}
+.twopence_roadmap_container {
+    overflow-x: hidden;
+    padding: 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.twopence_roadmap_container .slidder_container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+/* Twopence Roadmap ends */
+
+/* meet Artist starts */
+.meetArtist-container .card_main_div .latest_work_card {
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+}
+.meetArtist-container .flip_card_general_inner .card-overlay,
+.meetArtist-container .card_main_div .flip-card-back {
+    border-radius: 30px;
+}
+.meetArtist-container .card_main_div:nth-child(even) {
+    transform: translateY(-15px);
+}
+.meetArtist-container .card_main_div .flip-card-front {
+    padding: 0.5rem;
+}
+.meetArtist-container .latest_work_card .image {
+    border-radius: 20px;
+}
+.latest_work_container.meetArtist-container .artist-card-flex-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+/* Meet Artist ends */
+
+/* FAQ style starts */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.faq-container .accordion-container {
+    width: 35%;
+
+    --bs-accordion-active-bg: transparent;
+    --bs-accordion-btn-focus-box-shadow: unset;
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-bg: #1b1229;
+    --bs-accordion-border-radius: 20px;
+    --bs-accordion-border-width: 1px;
+
+    /* change */
+    --bs-accordion-btn-icon: url("../src/assets/bs-icon-active.svg");
+
+    --bs-accordion-btn-active-icon: url("../src//assets/bs-icon-active.svg");
+
+    --bs-accordion-inner-border-radius: unset;
+}
+.faq-container .accordion-button {
+    color: white;
+    font-weight: 600;
+}
+.faq-container .accordion-body {
+    color: #b9b5b5;
+}
+.faq-container .accordion-item {
+    padding: 0.5rem;
+}
+.faq-container .accordion-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    border-width: 90%;
+}
+
+/* FAQ style ends */
+
+/* join community starts */
+.join-community-container {
+    z-index: 1;
+    position: relative;
+    padding: 15rem 0 0;
+}
+.join-community-container .bg {
+    background-image: url(https://themegenix.net/nerko/wp-content/uploads/2022/12/collection_cta.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.1;
+}
+.join-community-container .main-header {
+    font-size: 70px;
+}
+.join-community-container .indigo_ball {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    transform: translateX(-30%);
+    width: 20px;
+    height: 20px;
+}
+.join-community-container .bitcoin_img {
+    position: absolute;
+    left: 33%;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-33%);
+}
+.join-community-container .eth_img {
+    position: absolute;
+    right: 33%;
+    top: 0;
+    width: 30px;
+    height: 30px;
+}
+.join-community-container .cancel_img {
+    position: absolute;
+    right: 35%;
+    width: 15px;
+    height: 15px;
+}
+.join-community-container .gradient-filled-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 14px;
+    text-align: center;
+}
+.join-community-container .divider {
+    margin-top: 10rem;
+}
+/* join community ends */
+
+/* footer starts */
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    gap: 3rem;
+}
+.footer-container .follow-us-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-container .follow-us-container .link {
+    color: #ffffff91;
+    font-size: 20px;
+}
+.footer-container .main_footer {
+    border-top: 1px solid #ffffff38;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin-top: 5rem;
+}
+.footer-container .eth-img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+}
+.footer-container .cancel_img {
+    width: 11px;
+    height: 11px;
+    top: 20%;
+    position: absolute;
+    right: 30%;
+}
+.footer-container .orange_ball {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    transform: translateX(-45%);
+}
+.footer-container .tiny-ball-top {
+    position: absolute;
+    bottom: 25%;
+    width: 13px;
+    height: 13px;
+    right: 45%;
+}
+/* footer ends */
+
+/* Media query for twopence slidder */
+
+@media screen and (max-width: 991px) {
+    .app-main-header .app-header-logo.small-screen {
+        width: 50px;
+        height: 50px;
+    }
+    .header-link-container .header-link.header-icon .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .header-link-container .header-link.header-icon .icon.wallet {
+        width: 26px;
+        height: 26px;
+    }
+    .app-main-header .header-link-container {
+        gap: 2rem;
+    }
+    .header-link-container .menu-btn {
+        width: 37px;
+        height: 37px;
+    }
+    .how-to-min-card .purple-ball-bottom,
+    .how-to-min-card .cancel-x-right,
+    .hero-banner-text-contanier .orange_ball {
+        display: none;
+    }
+    .how_to_min_div .how-to-min-card {
+        padding: 2rem;
+    }
+    .hero-banner-text-contanier .hero-text_header {
+        text-align: center;
+    }
+    .hero-banner-text-contanier .hero_inner_text_div {
+        align-items: center;
+    }
+    .view_opensea_span {
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, 50%) !important;
+    }
+
+    /* about us styling */
+    .about-us-container .about_platform_details .icon {
+        width: 300px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-us-container .content_container {
+        align-items: center;
+        justify-content: center;
+    }
+    .about-us-container .content_container .main-header {
+        font-size: 40px;
+        text-align: center;
+    }
+    .about-us-container .content_container .sub_text {
+        font-size: 14px;
+        text-align: center;
+    }
+    .about-us-container .details.content_container,
+    .about-us-container .select.content_container,
+    .about-us-container .select.content_container .sub_content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .about-us-container .singular_container.container_2 .row {
+        flex-direction: column-reverse;
+    }
+}
+
+/* only mobile */
+@media only screen and (max-width: 767px) {
+    .app-main-header .app-header-logo.small-screen {
+        width: 45px;
+        height: 45px;
+    }
+    .header-link-container .header-link.header-icon .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .header-link-container .header-link.header-icon .icon.wallet {
+        width: 19px;
+        height: 19px;
+    }
+
+    .header-link-container .menu-btn {
+        width: 32px;
+        height: 32px;
+    }
+    .app-main-header .header-link-container {
+        gap: 1rem;
+    }
+    .nft-img-container .left-img {
+        position: absolute;
+        top: 50px;
+        width: 170px;
+        height: auto;
+        left: 35px;
+        border-radius: 10px;
+        z-index: 2;
+    }
+    .nft-img-container .right-img {
+        position: absolute;
+        top: 85px;
+        right: 20px;
+        width: 170px;
+        height: auto;
+        border-radius: 10px;
+        z-index: 2;
+        /* background-color: #f696ff5b; */
+    }
+    .nft-img-container .white-dashed {
+        right: 30px;
+    }
+    .hero-banner-text-contanier .hero-text_header {
+        font-size: 39px !important;
+    }
+
+    .nft-img-container .shape {
+        width: 370px !important;
+        height: 370px !important;
+    }
+    .hero-banner-text-contanier .hero-text_header {
+        text-align: center;
+    }
+    .about-us-container .about_btc_down {
+        top: 395px;
+        left: 20%;
+    }
+    .latest_work_container .col-lg-3:nth-child(even) {
+        transform: translateY(0);
+    }
+
+    .twopence_roadmap_container .slidder_container {
+        width: 300px;
+    }
+
+    .twopence_roadmap_container .slider-container {
+        max-width: 300px;
+    }
+    .latest_work_container .main-header {
+        font-size: 55px;
+    }
+    .footer-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 15px;
+    }
+    .footer-container .main_footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .footer-container .eth-img {
+        left: 5%;
+        width: 20px;
+        height: 20px;
+    }
+    .footer-container .orange_ball {
+        display: none;
+    }
+}
+
+/* Mobile and tab view */
+@media only screen and (max-width: 768px) and (max-width: 1023px) {
+    /* LANDING PAGE */
+    .landing-page-header .gradient-blur-image {
+        width: 100%;
+    }
+    .landing-page-header .violet-ball-lower-right {
+        right: 10%;
+        top: 60px;
+    }
+    .landing-page-header .star-twinkle-right {
+        right: 20%;
+    }
+    .landing-page-header .orange-ball-right {
+        right: 1%;
+    }
+    .landing-page-header .star-twinkle {
+        left: 17%;
+    }
+    .landing-page-header .orange-blur-ball {
+        top: 40px;
+    }
+    .landing-page-header .violet-ball {
+        top: 125px;
+        display: none;
+    }
+    .landing-page-header .violet-ball-right {
+        display: none;
+    }
+
+    .landing-page-header .orange-ball-left-lower {
+        left: 5%;
+    }
+    /* LANDING PAGE ENDS*/
+
+    /* nft card */
+    .nft-gallery-conatiner {
+        padding: 2rem;
+        justify-content: center;
+    }
+    .nft-gallery-conatiner .nft-card {
+        padding: 0.5rem;
+    }
+    .nft-card .nft-head-details {
+        padding: 0.5rem;
+        top: 10px;
+        font-size: 14px;
+    }
+
+    /* nft card ends */
+
+    /* sign up sign in starts */
+    .glassmorphic-container .inner-container {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+    .glassmorphic-container .blur-orange-ball {
+        width: 100px;
+        height: 100px;
+    }
+    .inner-container .display-image-container {
+        display: none;
+    }
+    /* sign up sign in ends */
+
+    /* hero section */
+
+    .hero-banner-text-contanier .eth-img {
+        top: -40px;
+        left: 50%;
+    }
+    .hero-banner-text-contanier .view_opensea_span {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    .hero-banner-text-contanier .orange_ball {
+        top: 280px;
+        left: 20%;
+    }
+    .hero-banner-text-contanier .btc-img {
+        bottom: 0;
+        top: unset;
+        transform: unset;
+    }
+
+    .hero-banner-text-contanier .hero-text_header {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .app-main-hero-container .hero-banner-text-contanier {
+        gap: 4rem;
+    }
+
+    .powered_by_container .powered-by-img {
+        width: 80px;
+    }
+    .powered_by_container .sponsor_container {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .powered_by_container .powered-by-img.bit-go {
+        width: 70px;
+    }
+    /* hro section ends */
+    .how_to_min_div .how-to-min-card {
+        padding: 2rem;
+    }
+    .how_to_min_div .how-to-min-card .mint_card .content .icon {
+        width: 50px;
+        height: auto;
+    }
+    .how-to-min-card .cancel-x-right {
+        position: absolute;
+        bottom: 50px;
+        right: 40px;
+        width: 20px;
+        height: 20px;
+    }
+    .how-to-min-card .purple-ball-bottom {
+        position: absolute;
+        bottom: 25px;
+        left: 40px;
+        width: 18px;
+        height: 18px;
+    }
+    .how-to-min-card .tiny-ball-top {
+        left: 130px;
+    }
+    .twopence_roadmap_container .roadmap_card {
+        width: 100%;
+    }
+
+    .faq-container {
+        padding: 0 1rem;
+    }
+    .faq-container .accordion-container {
+        width: 100%;
+    }
+    .meetArtist-container .card_main_div .latest_work_card {
+        width: 175px;
+    }
+    .latest_work_container.meetArtist-container {
+        padding: 0 1rem;
+    }
+    .latest_work_container.meetArtist-container .artist-card-flex-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .meetArtist-container .card_main_div:nth-child(even) {
+        transform: translateY(0);
+    }
+
+    .meetArtist-container .latest_work_card .image {
+        border-radius: 15px;
+    }
+
+    .join-community-container .eth_img {
+        right: 33%;
+        top: -15%;
+    }
+
+    .join-community-container .bitcoin_img {
+        left: 7%;
+        transform: translateX(-7%);
+    }
+    .join-community-container .cancel_img {
+        right: 5%;
+        transform: translateX(-5%);
+    }
+}
+
+/* mobile view ends */
