@@ -1,2 +1,3 @@
-import { nftcards, fetchRealNFTData } from "./nftcards";
-export { nftcards, fetchRealNFTData };
+import { nftcards, fetchRealNFTData } from './nftcards';
+import InvestmentChart from './InvestmentChart';
+export { nftcards, fetchRealNFTData, InvestmentChart };

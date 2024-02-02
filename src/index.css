@@ -1,73 +1,73 @@
 /* import font */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap"); /*glitch like fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap'); /*glitch like fonts */
 
 :root {
-    /* Colors */
-    --primary-color: #741ff5;
-    --primary-color-light: #b384fa;
-    --primary-color-darK: #200945;
-    --gradient-first: #2600fc;
-    --gradient-second: #ff00ea;
-    --gradient-angle: 25deg;
-    --body-color: #0f051d;
-    --text-light: #b9b5b5;
-    /* FONT SIZES */
-    --font-8: 0.5rem;
-    --font-10: 0.625rem;
-    --font-11: 0.6875rem;
-    --font-12: 0.75rem;
-    --font-13: 0.8125rem;
-    --font-14: 0.875rem;
-    --font-15: 0.9375rem;
-    --font-16: 1rem;
-    --font-17: 1.0625rem;
-    --font-18: 1.125rem;
-    --font-19: 1.1875rem;
-    --font-19: 1.1875rem;
-    --font-20: 1.25rem;
-    --font-21: 1.3125rem;
-    --font-22: 1.375rem;
-    --font-23: 1.4375rem;
-    --font-24: 1.5rem;
-    --font-25: 1.5625rem;
-    --font-26: 1.625rem;
-    --font-27: 1.6875rem;
-    --font-28: 1.75rem;
-    --font-29: 1.8125rem;
-    --font-30: 1.875rem;
-    --font-31: 1.9375rem;
-    --font-32: 2rem;
-    --font-33: 2.0625rem;
-    --font-34: 2.125rem;
-    --font-35: 2.1875rem;
-    --font-36: 2.25rem;
-    --font-37: 2.3125rem;
-    --font-38: 2.375rem;
-    --font-39: 2.4375rem;
-    --font-40: 2.5rem;
-    --font-41: 2.5625rem;
-    --font-42: 2.625rem;
-    --font-43: 2.6875rem;
-    --font-44: 2.75rem;
-    --font-45: 2.8125rem;
-    --font-46: 2.875rem;
-    --font-47: 2.9375rem;
-    --font-48: 3rem;
-    --font-49: 3.0625rem;
-    --font-50: 3.125rem;
+  /* Colors */
+  --primary-color: #741ff5;
+  --primary-color-light: #b384fa;
+  --primary-color-darK: #200945;
+  --gradient-first: #2600fc;
+  --gradient-second: #ff00ea;
+  --gradient-angle: 25deg;
+  --body-color: #0f051d;
+  --text-light: #b9b5b5;
+  /* FONT SIZES */
+  --font-8: 0.5rem;
+  --font-10: 0.625rem;
+  --font-11: 0.6875rem;
+  --font-12: 0.75rem;
+  --font-13: 0.8125rem;
+  --font-14: 0.875rem;
+  --font-15: 0.9375rem;
+  --font-16: 1rem;
+  --font-17: 1.0625rem;
+  --font-18: 1.125rem;
+  --font-19: 1.1875rem;
+  --font-19: 1.1875rem;
+  --font-20: 1.25rem;
+  --font-21: 1.3125rem;
+  --font-22: 1.375rem;
+  --font-23: 1.4375rem;
+  --font-24: 1.5rem;
+  --font-25: 1.5625rem;
+  --font-26: 1.625rem;
+  --font-27: 1.6875rem;
+  --font-28: 1.75rem;
+  --font-29: 1.8125rem;
+  --font-30: 1.875rem;
+  --font-31: 1.9375rem;
+  --font-32: 2rem;
+  --font-33: 2.0625rem;
+  --font-34: 2.125rem;
+  --font-35: 2.1875rem;
+  --font-36: 2.25rem;
+  --font-37: 2.3125rem;
+  --font-38: 2.375rem;
+  --font-39: 2.4375rem;
+  --font-40: 2.5rem;
+  --font-41: 2.5625rem;
+  --font-42: 2.625rem;
+  --font-43: 2.6875rem;
+  --font-44: 2.75rem;
+  --font-45: 2.8125rem;
+  --font-46: 2.875rem;
+  --font-47: 2.9375rem;
+  --font-48: 3rem;
+  --font-49: 3.0625rem;
+  --font-50: 3.125rem;
 }
 body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    background-color: #0f051d !important;
-    position: relative;
-    color: #fff !important;
-    font-family: "Edu NSW ACT Foundation", cursive;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: #0f051d !important;
+  position: relative;
+  color: #fff !important;
+  font-family: 'Edu NSW ACT Foundation', cursive;
 }
 body::-webkit-scrollbar {
-    width: 0;
+  width: 0;
 }
 
 /* remove default padding and margin */
@@ -86,143 +86,141 @@ a,
 img,
 body,
 aside {
-    padding: 0;
-    margin: 0;
-    margin-bottom: 0;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
 }
 /* ends */
 .fnt-10 {
-    font-size: var(--font-10);
+  font-size: var(--font-10);
 }
 .fnt-11 {
-    font-size: var(--font-11);
+  font-size: var(--font-11);
 }
 
 .fnt-12 {
-    font-size: var(--font-12);
+  font-size: var(--font-12);
 }
 .fnt-13 {
-    font-size: var(--font-13);
+  font-size: var(--font-13);
 }
 
 .fnt-14 {
-    font-size: var(--font-14);
+  font-size: var(--font-14);
 }
 .fnt-15 {
-    font-size: var(--font-15);
+  font-size: var(--font-15);
+}
+.fnt-35 {
+  font-size: var(--font-35);
+}
+.fnt-40 {
+  font-size: var(--font-40);
 }
 .fnt-50 {
-    font-size: var(--font-50);
+  font-size: var(--font-50);
 }
 .fnt-60 {
-    font-size: 60px !important;
+  font-size: 60px !important;
 }
 .clr-light {
-    color: var(--text-light);
+  color: var(--text-light);
 }
 .g-5custom {
-    --bs-gutter-y: 2rem;
-    --bs-gutter-x: 2rem;
+  --bs-gutter-y: 2rem;
+  --bs-gutter-x: 2rem;
 }
 .g-3custom {
-    --bs-gutter-y: 1rem;
-    --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+  --bs-gutter-x: 1rem;
 }
 button,
 a {
-    border: none;
-    outline: none;
-    text-decoration: none !important;
-    background-color: transparent;
-    cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none !important;
+  background-color: transparent;
+  cursor: pointer;
 }
 .clr-black {
-    color: #000;
+  color: #000;
 }
 .hover_color_purple:hover {
-    color: #ff00ea;
+  color: #ff00ea;
 }
 .text-gradient {
-    background-color: #2600fc;
-    background-image: linear-gradient(1deg, #2600fc, #ff00ea);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background-color: #2600fc;
+  background-image: linear-gradient(1deg, #2600fc, #ff00ea);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .fact_count {
-    font-size: 55px;
-    line-height: 1.5;
-    font-weight: 800;
-    margin: 0 0 10px;
+  font-size: 55px;
+  line-height: 1.5;
+  font-weight: 800;
+  margin: 0 0 10px;
 }
 .divider_size {
-    width: 70px;
-    height: auto;
+  width: 70px;
+  height: auto;
 }
 /* animations */
 /* BOUNCE ANNIMATION 1️⃣*/
 @keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(16px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(16px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
 
-    100% {
-        transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /* animations end */
 
 /* core utility buttons */
 .gradient-filled-btn {
-    padding: 1rem 5rem;
-    text-align: center;
-    border-radius: 56px;
-    color: #fff;
-    font-size: var(--font-20);
-    transition: 0.2s;
-    background-color: var(--gradient-first);
-    background-image: linear-gradient(
-        var(--gradient-angle),
-        var(--gradient-first),
-        var(--gradient-second)
-    );
+  padding: 1rem 5rem;
+  text-align: center;
+  border-radius: 56px;
+  color: #fff;
+  font-size: var(--font-20);
+  transition: 0.2s;
+  background-color: var(--gradient-first);
+  background-image: linear-gradient(var(--gradient-angle), var(--gradient-first), var(--gradient-second));
 }
 
 .gradient-filled-btn:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 .gradient-hover-btn {
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 56px;
-    padding: 1rem 5rem;
-    background-color: transparent;
-    transition: 0.2s;
-    font-size: var(--font-20);
-    text-align: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 56px;
+  padding: 1rem 5rem;
+  background-color: transparent;
+  transition: 0.2s;
+  font-size: var(--font-20);
+  text-align: center;
 }
 .gradient-hover-btn:hover {
-    background-color: var(--gradient-first);
-    background-image: linear-gradient(
-        var(--gradient-angle),
-        var(--gradient-first),
-        var(--gradient-second)
-    );
-    border: 1px solid #0f051d;
+  background-color: var(--gradient-first);
+  background-image: linear-gradient(var(--gradient-angle), var(--gradient-first), var(--gradient-second));
+  border: 1px solid #0f051d;
 }
 /* core utility buttons ends */
